@@ -1,10 +1,25 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+// import react
+import React from "react";
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
+// import react dom to render app
+import ReactDOM from "react-dom/client";
+
+// import main App component
+import App from "./App";
+
+// import provider to connect redux to react
+import { Provider } from "react-redux";
+
+// import redux store
+import { store } from "./utils/store";
+
+// import global css file
+import "./index.css";
+
+// render app to root element
+ReactDOM.createRoot(document.getElementById("root")).render(
+  // wrap app with provider to use redux
+  <Provider store={store}>
     <App />
-  </StrictMode>,
-)
+  </Provider>
+);
