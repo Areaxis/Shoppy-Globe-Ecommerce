@@ -1,0 +1,109 @@
+.cart-item {
+  background: white;
+  margin-bottom: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.item-info {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cart-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.item-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-title:hover {
+  color: cyan;
+  text-decoration: underline;
+}
+
+.cart-item button {
+  margin-left: 5px;
+  padding: 5px 10px;
+}
+
+.cart-item > button {
+  flex: 0 0 90px;        /* fixed space for remove button */
+}
+
+.remove-button {
+  color: white;
+  background: rgb(192, 0, 0)
+}
+
+.remove-button:hover {
+  background: red;
+}
+
+.qty-controls {
+  flex: 0 0 120px;       /* fixed width area */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.qty-controls button {
+  background: rgb(0, 179, 179);
+  color: white;
+}
+
+.qty-controls button:hover {
+  background: cyan;
+}
+
+
+@media (max-width: 600px) {
+
+  .cart-item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .item-info {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .cart-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .item-text h4 {
+    font-size: 14px;
+  }
+
+  .qty-controls {
+    flex: none;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cart-item > button {
+    flex: none;
+    width: 100%;
+  }
+
+  .cart-item button {
+    padding: 8px;
+    margin-left: 0;
+  }
+}
